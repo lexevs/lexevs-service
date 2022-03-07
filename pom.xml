@@ -354,9 +354,15 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.acegisecurity</groupId>
-			<artifactId>acegi-security</artifactId>
-			<version>1.0.4</version>
+    		<groupId>org.acegisecurity</groupId>
+    		<artifactId>acegi-security</artifactId>
+    		<version>1.0.7</version>
+    		<exclusions>
+    			<exclusion>
+    				<groupId>log4j</groupId>
+    				<artifactId>log4j</artifactId>
+    			</exclusion>
+    		</exclusions>
 		</dependency>
 
 		<dependency>
