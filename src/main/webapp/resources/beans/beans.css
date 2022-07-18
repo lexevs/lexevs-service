@@ -1,0 +1,46 @@
+#navcontainer
+{
+	border-right: 1px solid #000;
+	padding: 0 0 1em 0;
+	margin-bottom: 1em;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+}
+
+.name{
+	font-weight:bold;
+}
+
+.collapsibleList li{
+  list-style-image:url('images/button.png');
+  cursor:auto;
+}
+
+li.collapsibleListOpen{
+  list-style-image:url('images/button-open.png');
+  cursor:pointer;
+}
+
+li.collapsibleListClosed{
+  list-style-image:url('images/button-closed.png');
+  cursor:pointer;
+}
+
+table {
+	width:90%;
+	border:1px solid #e5eff8;
+
+	margin:1em auto;
+	border-collapse:collapse;
+}
+
+td {
+	color:#678197;
+	border:1px solid #e5eff8;
+	padding:.3em 1em;
+	text-align:center;
+}
+
+td.tdContent {
+	text-align:left;
+}
+	
