@@ -9,6 +9,9 @@
 package edu.mayo.cts2.framework.lexevs;
 
 import java.util.Map;
+
+import javax.annotation.PostConstruct;
+
 import org.LexGrid.LexBIG.Impl.LexBIGServiceImpl;
 import org.LexGrid.LexBIG.LexBIGService.LexBIGService;
 import org.apache.commons.lang.StringUtils;
@@ -16,6 +19,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
@@ -30,8 +34,10 @@ public class LexBigServiceFactory implements FactoryBean<LexBIGService>, Disposa
 
 	private LexBIGService lexBIGService;
 
+	@Value("${lexevsRemoteApiUrl}")
 	private String lexevsRemoteApiUrl;
 	
+	@Value("${LG_CONFIG_FILE}")
 	private String lgConfigFile;
 	
 	private boolean hasBeenConfigured = false;
@@ -80,9 +86,8 @@ public class LexBigServiceFactory implements FactoryBean<LexBIGService>, Disposa
 		}
 	}
 	
-	public void updateCallback(Map<String,?> properties){
-		this.lexevsRemoteApiUrl = (String)properties.get("lexevsRemoteApiUrl");
-		this.lgConfigFile = (String)properties.get(LG_CONFIG_FILE_ENV);
+	@PostConstruct
+	public void updateCallback(){
 		
 		this.hasBeenConfigured = true;
 	}
