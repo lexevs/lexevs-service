@@ -6,7 +6,7 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:component-scan base-package="edu.mayo.cts2.framework.plugin.service.lexevs" />
+	<context:component-scan base-package="edu.mayo.cts2.framework.service.lexevs" />
 	
 	<util:properties id="buildProperties" location="classpath:build-info.properties" />
 	
@@ -14,26 +14,26 @@
         location="classpath:lexevs-service.properties"
         system-properties-mode="OVERRIDE" />
 
-	<bean id="serverContext" class="edu.mayo.cts2.framework.core.config.TestServerContext" />
+	<bean id="serverContext" class="edu.mayo.cts2.framework.service.core.config.TestServerContext" />
 
-	<bean id="cts2Marshaller" class="edu.mayo.cts2.framework.core.xml.DelegatingMarshaller" />
+	<bean id="cts2Marshaller" class="edu.mayo.cts2.framework.service.core.xml.DelegatingMarshaller" />
 
 	<bean id="urlConstructor" name="urlConstructor"
-		class="edu.mayo.cts2.framework.util.spring.UrlConstructorSpringFactory" />
+		class="edu.mayo.cts2.framework.service.util.UrlConstructorSpringFactory" />
 
-	<bean id="pluginConfig"
-		class="edu.mayo.cts2.framework.core.config.TestPluginConfigSpringFactory" />
+<!--	<bean id="pluginConfig"-->
+<!--		class="edu.mayo.cts2.framework.core.config.TestPluginConfigSpringFactory" />-->
 
-	<bean id="pluginConfigManager"
-		class="edu.mayo.cts2.framework.core.plugin.DefaultPluginConfigManager" />
+<!--	<bean id="pluginConfigManager"-->
+<!--		class="edu.mayo.cts2.framework.core.plugin.DefaultPluginConfigManager" />-->
 
 	<bean id="configInitializer"
-		class="edu.mayo.cts2.framework.core.config.TestConfigInitializerSpringFactory" />
+		class="edu.mayo.cts2.framework.service.core.config.TestConfigInitializerSpringFactory" />
 		
-	<bean id="lexBigServiceFactory" class="edu.mayo.cts2.framework.plugins.service.LocalClasspathLexBigServiceFactory" />
+	<bean id="lexBigServiceFactory" class="edu.mayo.cts2.framework.service.LocalClasspathLexBigServiceFactory" />
 
 	<beans profile="noUriResolver">
-		<bean id="restUriResolver" class="edu.mayo.cts2.framework.plugin.service.lexevs.uri.TestRestUriResolver" />
+		<bean id="restUriResolver" class="edu.mayo.cts2.framework.service.lexevs.uri.TestRestUriResolver" />
 	</beans>
 	
 </beans>
