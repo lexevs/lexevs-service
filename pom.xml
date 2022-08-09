@@ -2,12 +2,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>edu.mayo.cts2.framework</groupId>
-        <artifactId>cts2-framework</artifactId>
-        <version>1.4.0-SNAPSHOT</version>
-        <relativePath>./boot-pom.xml</relativePath><!-- lookup parent from repository -->
-    </parent>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.1</version>
+	</parent>
+	
+	<properties>
+        <org.spring-version>5.3.21</org.spring-version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <test.permgen.max>500m</test.permgen.max>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <forkCount>4</forkCount>
+        <java.version>1.8</java.version>
+        <lexevs.version>6.5.6.RC2</lexevs.version>
+        <spring.version>${org.spring-version}</spring.version>
+        <spring-security.version>4.2.6.RELEASE</spring-security.version>
+    </properties>
 
     <artifactId>lexevs-service</artifactId>
     <version>1.4.0-SNAPSHOT</version>
@@ -84,22 +97,26 @@
         </site>
     </distributionManagement>
 
-    <properties>
-        <forkCount>4</forkCount>
-        <java.version>1.8</java.version>
-        <lexevs.version>6.5.6.RC1</lexevs.version>
-        <spring.version>${org.spring-version}</spring.version>
-        <spring-security.version>4.2.6.RELEASE</spring-security.version>
-    </properties>
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <exclusions>
+     			<exclusion>
+         			<groupId>org.apache.logging.log4j</groupId>
+         			<artifactId>log4j-to-slf4j</artifactId>
+     			</exclusion>
+     		</exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+     		<exclusions>
+     			<exclusion>
+         			<groupId>org.apache.logging.log4j</groupId>
+         			<artifactId>log4j-to-slf4j</artifactId>
+     			</exclusion>
+     		</exclusions>
         </dependency>
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
@@ -206,6 +223,18 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.10.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 <!--        <dependency>-->
 <!--            <groupId>edu.mayo.cts2.framework</groupId>-->
 <!--            <artifactId>cts2-base-service</artifactId>-->
@@ -223,6 +252,12 @@
             <artifactId>clojure</artifactId>
             <version>1.11.1</version>
         </dependency>
+        
+        <dependency>
+    		<groupId>clj-http</groupId>
+    		<artifactId>clj-http</artifactId>
+    		<version>0.5.0</version>
+		</dependency>
 
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -234,24 +269,48 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-aspects</artifactId>
             <version>${org.spring-version}</version>
+            <exclusions>
+     			<exclusion>
+         			<groupId>org.apache.logging.log4j</groupId>
+         			<artifactId>log4j-to-slf4j</artifactId>
+     			</exclusion>
+     		</exclusions>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>${org.spring-version}</version>
+            <exclusions>
+     			<exclusion>
+         			<groupId>org.apache.logging.log4j</groupId>
+         			<artifactId>log4j-to-slf4j</artifactId>
+     			</exclusion>
+     		</exclusions>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-oxm</artifactId>
             <version>${org.spring-version}</version>
+            <exclusions>
+     			<exclusion>
+         			<groupId>org.apache.logging.log4j</groupId>
+         			<artifactId>log4j-to-slf4j</artifactId>
+     			</exclusion>
+     		</exclusions>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${org.spring-version}</version>
+            <exclusions>
+     			<exclusion>
+         			<groupId>org.apache.logging.log4j</groupId>
+         			<artifactId>log4j-to-slf4j</artifactId>
+     			</exclusion>
+     		</exclusions>
         </dependency>
 
         <dependency>
@@ -321,18 +380,6 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.9.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.reflections</groupId>
-            <artifactId>reflections</artifactId>
-            <version>0.10.2</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-api</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>

@@ -26,6 +26,10 @@ package edu.mayo.cts2.framework.service.core.url;
 import edu.mayo.cts2.framework.service.core.config.ServerContext;
 import edu.mayo.cts2.framework.service.core.constants.URIHelperInterface;
 import edu.mayo.cts2.framework.service.core.util.EncodingUtils;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import edu.mayo.cts2.framework.model.core.ScopedEntityName;
 import edu.mayo.cts2.framework.model.service.core.types.FunctionalProfile;
 import edu.mayo.cts2.framework.model.service.core.types.StructuralProfile;
@@ -38,8 +42,10 @@ import edu.mayo.cts2.framework.model.service.core.types.StructuralProfile;
  *
  * @author <a href="mailto:kevin.peterson@mayo.edu">Kevin Peterson</a>
  */
+@Component
 public class UrlConstructor {
 
+	@Autowired
 	private ServerContext serverContext;
 	
 	/**
