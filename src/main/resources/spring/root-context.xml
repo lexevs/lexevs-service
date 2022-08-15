@@ -73,7 +73,10 @@
 				<bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"/>
 				<bean class="org.springframework.http.converter.FormHttpMessageConverter"/>
 				<bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+				<bean class="edu.mayo.cts2.framework.webapp.rest.converter.MappingGsonHttpMessageConverter" />
 			</list>
 		</property>
 	</bean>
+	
+
 </beans>

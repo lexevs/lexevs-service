@@ -35,12 +35,15 @@ import org.springframework.http.MediaType;
 import org.springframework.http.converter.AbstractHttpMessageConverter;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.http.converter.HttpMessageNotWritableException;
+import org.springframework.stereotype.Component;
 
 /**
  * The Class MappingGsonHttpMessageConverter.
  *
  * @author <a href="mailto:kevin.peterson@mayo.edu">Kevin Peterson</a>
  */
+
+@Component
 public class MappingGsonHttpMessageConverter extends AbstractHttpMessageConverter<Object>{
 
 	public static final Charset DEFAULT_CHARSET = Charset.forName("UTF-8");

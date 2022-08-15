@@ -43,6 +43,8 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+
+import edu.mayo.cts2.framework.model.BaseCts2ModelObject;
 import edu.mayo.cts2.framework.model.Cts2ModelObject;
 import edu.mayo.cts2.framework.model.core.Changeable;
 import edu.mayo.cts2.framework.model.core.ChangeableElementGroup;
@@ -67,6 +69,7 @@ import org.reflections.Reflections;
 import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
 import org.reflections.util.FilterBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
@@ -86,6 +89,7 @@ public class JsonConverter {
 
     private static final String ISO_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm'Z'";
 
+    @Autowired
 	private Gson gson;
 
 
@@ -219,7 +223,7 @@ public class JsonConverter {
 	 *
 	 * @return the gson
 	 */
-	protected Gson buildGson(){
+	public Gson buildGson(){
 		GsonBuilder gson = new GsonBuilder();
 
         gson.setDateFormat(ISO_DATE_FORMAT);
@@ -290,6 +294,19 @@ public class JsonConverter {
 		}
 
 	}
+	
+	
+//	public static class NullElementSerializer implements JsonSerializer<Object>{
+//
+//		@Override
+//		public JsonElement serialize(Object src, Type typeOfSrc, JsonSerializationContext context) {
+//			// TODO Auto-generated method stub
+//			return null;
+//		}
+//
+//
+//		
+//	}
 	
 	/**
 	 * The Class TsAnyTypeSerializer.
