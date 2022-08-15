@@ -185,7 +185,7 @@ public class CommonValueSetUtils implements InitializingBean,
 	 */
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		this.buildValueSetCache();
+		//this.buildValueSetCache();
 
 	}
 

@@ -9,7 +9,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map.Entry;
 
-import javax.annotation.Resource;
 
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang.ArrayUtils;
@@ -18,6 +17,7 @@ import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.ByteArrayHttpMessageConverter;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -52,7 +52,6 @@ import edu.mayo.cts2.framework.model.core.ChangeableElementGroup;
 import edu.mayo.cts2.framework.model.core.TsAnyType;
 import edu.mayo.cts2.framework.model.entity.EntityDescription;
 import edu.mayo.cts2.framework.model.updates.ChangeableResource;
-import edu.mayo.cts2.framework.service.core.json.JsonConverter;
 
 @Configuration
 public class WebApplicationConfig implements WebMvcConfigurer  {
