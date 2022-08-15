@@ -283,7 +283,9 @@ public class UrlConstructor {
 	 * @return the string
 	 */
 	private String addServerContext(String url){
-		return this.serverContext.getServerRootWithAppName() + "/" + url;
+		return this.serverContext.getServerRootWithAppName().endsWith("/")
+				?this.serverContext.getServerRootWithAppName() + url
+						:this.serverContext.getServerRootWithAppName() + "/" + url;
 	}
 	
 	/**
