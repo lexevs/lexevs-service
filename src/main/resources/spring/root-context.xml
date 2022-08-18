@@ -17,14 +17,15 @@
 	
 		<!-- Scans within the base package of the application for @Components to 
 		configure as beans -->
-	<context:component-scan base-package="edu.mayo.cts2.framework.controller" />
+<!--<context:component-scan base-package="edu.mayo.cts2.framework.controller" />
+	<context:component-scan base-package="edu.mayo.cts2.framework.configuration" />
 	<context:component-scan base-package="edu.mayo.cts2.framework.model" />
-	<context:component-scan base-package="edu.mayo.cts2.framework.service" >
-		<context:include-filter type="annotation"
+	<context:component-scan base-package="edu.mayo.cts2.framework.service" /> -->
+		<!-- <context:include-filter type="annotation"
 			expression="org.aspectj.lang.annotation.Aspect" />
 		<context:exclude-filter type="annotation"
-			expression="org.springframework.stereotype.Controller" />
-	</context:component-scan>
+			expression="org.springframework.stereotype.Controller" /> -->
+	<!-- </context:component-scan>  -->
 	
 
 	
@@ -46,8 +47,8 @@
 <!--		</property>-->
 <!--	</bean>-->
 
-	<mvc:annotation-driven/>
-	<context:component-scan base-package="edu.mayo.cts2.framework.webapp"/>
+	<!-- <mvc:annotation-driven/> -->
+	<!-- <context:component-scan base-package="edu.mayo.cts2.framework.webapp"/>  -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/pages/"/>
 		<property name="suffix" value=".jsp"/>
@@ -65,7 +66,7 @@
 
 	<bean id="properties" class="java.util.Properties"/>-->
 
-	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+<!-- <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
 		<property name="messageConverters">
 			<list>
 				<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
@@ -73,7 +74,10 @@
 				<bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"/>
 				<bean class="org.springframework.http.converter.FormHttpMessageConverter"/>
 				<bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+				<bean class="org.springframework.http.converter.json.GsonHttpMessageConverter;" />
 			</list>
 		</property>
-	</bean>
+	</bean> -->	
+	
+
 </beans>
