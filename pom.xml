@@ -16,14 +16,13 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <forkCount>4</forkCount>
-        <java.version>1.8</java.version>
-        <lexevs.version>6.5.6.RC2</lexevs.version>
+        <lexevs.version>6.5.6.RC4</lexevs.version>
         <spring.version>${org.spring-version}</spring.version>
         <spring-security.version>4.2.6.RELEASE</spring-security.version>
     </properties>
 
     <artifactId>lexevs-service</artifactId>
-    <version>1.4.0.RC1</version>
+    <version>2.0.0.RC2</version>
     <packaging>jar</packaging>
     <name>CTS2 LexEVS Service</name>
     <description>A CTS2 Framework Service based on LexEVS</description>
@@ -118,6 +117,22 @@
      			</exclusion>
      		</exclusions>
         </dependency>
+        <dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-starter-tomcat</artifactId>
+        	<scope>provided</scope>
+    	</dependency>
+    	<dependency>
+    		<groupId>org.hibernate.common</groupId>
+    		<artifactId>hibernate-commons-annotations</artifactId>
+   			<version>5.1.2.Final</version>
+   			   <exclusions>
+                    <exclusion>
+                        <groupId>net.sf.ehcache</groupId>
+                        <artifactId>ehcache</artifactId>
+                    </exclusion>
+                </exclusions>
+		</dependency>
         <dependency>
             <groupId>lexevs</groupId>
             <artifactId>lexbig-impl</artifactId>
