@@ -245,19 +245,7 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-csv</artifactId>
             <version>1.9.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.clojure</groupId>
-            <artifactId>clojure</artifactId>
-            <version>1.11.1</version>
-        </dependency>
-        
-        <dependency>
-    		<groupId>clj-http</groupId>
-    		<artifactId>clj-http</artifactId>
-    		<version>0.5.0</version>
-		</dependency>
+        </dependency>       
 
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
