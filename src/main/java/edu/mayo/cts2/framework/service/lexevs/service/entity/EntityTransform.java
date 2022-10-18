@@ -8,34 +8,14 @@
 */
 package edu.mayo.cts2.framework.service.lexevs.service.entity;
 
-import edu.mayo.cts2.framework.service.core.constants.URIHelperInterface;
-import edu.mayo.cts2.framework.service.core.util.EncodingUtils;
-import edu.mayo.cts2.framework.model.core.Comment;
-import edu.mayo.cts2.framework.model.core.Definition;
-import edu.mayo.cts2.framework.model.core.DescriptionInCodeSystem;
-import edu.mayo.cts2.framework.model.core.EntityReference;
-import edu.mayo.cts2.framework.model.core.LanguageReference;
-import edu.mayo.cts2.framework.model.core.PredicateReference;
-import edu.mayo.cts2.framework.model.core.Property;
-import edu.mayo.cts2.framework.model.core.StatementTarget;
-import edu.mayo.cts2.framework.model.core.URIAndEntityName;
-import edu.mayo.cts2.framework.model.entity.Designation;
-import edu.mayo.cts2.framework.model.entity.EntityDescription;
-import edu.mayo.cts2.framework.model.entity.EntityDirectoryEntry;
-import edu.mayo.cts2.framework.model.entity.EntityListEntry;
-import edu.mayo.cts2.framework.model.entity.NamedEntityDescription;
-import edu.mayo.cts2.framework.model.entity.types.DesignationRole;
-import edu.mayo.cts2.framework.model.util.ModelUtils;
-import edu.mayo.cts2.framework.service.lexevs.transform.AbstractBaseTransform;
-import edu.mayo.cts2.framework.service.lexevs.uri.UriResolver;
-import edu.mayo.cts2.framework.service.lexevs.utility.CommonResolvedValueSetUtils;
-import edu.mayo.cts2.framework.service.lexevs.utility.CommonResolvedValueSetUtils.UriVersionPair;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
 import javax.annotation.Resource;
+
 import org.LexGrid.LexBIG.DataModel.Collections.AssociationList;
 import org.LexGrid.LexBIG.DataModel.Core.Association;
 import org.LexGrid.LexBIG.DataModel.Core.ResolvedConceptReference;
@@ -54,6 +34,28 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 
+import edu.mayo.cts2.framework.model.core.Comment;
+import edu.mayo.cts2.framework.model.core.Definition;
+import edu.mayo.cts2.framework.model.core.DescriptionInCodeSystem;
+import edu.mayo.cts2.framework.model.core.EntityReference;
+import edu.mayo.cts2.framework.model.core.LanguageReference;
+import edu.mayo.cts2.framework.model.core.PredicateReference;
+import edu.mayo.cts2.framework.model.core.Property;
+import edu.mayo.cts2.framework.model.core.StatementTarget;
+import edu.mayo.cts2.framework.model.core.URIAndEntityName;
+import edu.mayo.cts2.framework.model.entity.Designation;
+import edu.mayo.cts2.framework.model.entity.EntityDescription;
+import edu.mayo.cts2.framework.model.entity.EntityDirectoryEntry;
+import edu.mayo.cts2.framework.model.entity.EntityListEntry;
+import edu.mayo.cts2.framework.model.entity.NamedEntityDescription;
+import edu.mayo.cts2.framework.model.entity.types.DesignationRole;
+import edu.mayo.cts2.framework.model.util.ModelUtils;
+import edu.mayo.cts2.framework.service.core.constants.URIHelperInterface;
+import edu.mayo.cts2.framework.service.core.util.EncodingUtils;
+import edu.mayo.cts2.framework.service.lexevs.transform.AbstractBaseTransform;
+import edu.mayo.cts2.framework.service.lexevs.utility.CommonResolvedValueSetUtils;
+import edu.mayo.cts2.framework.service.lexevs.utility.CommonResolvedValueSetUtils.UriVersionPair;
+
 /**
  * CTS2 <-> LexEVS Transform dealing with Entities and EntityDescriptions. 
  */
@@ -61,9 +63,6 @@ import org.springframework.util.Assert;
 public class EntityTransform 
 	extends AbstractBaseTransform<EntityListEntry, ResolvedConceptReference, EntityDirectoryEntry, ResolvedConceptReference> 
 	implements InitializingBean {
-	
-	@Resource
-	private UriResolver uriResolver;
 
 	@Resource
 	private LexBIGService lexBigService;

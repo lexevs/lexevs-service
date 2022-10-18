@@ -13,7 +13,6 @@ import edu.mayo.cts2.framework.model.service.core.NameOrURI;
 import edu.mayo.cts2.framework.service.lexevs.naming.CodingSchemeNameTranslator;
 import edu.mayo.cts2.framework.service.lexevs.naming.NameVersionPair;
 import edu.mayo.cts2.framework.service.lexevs.naming.VersionNameConverter;
-import edu.mayo.cts2.framework.service.lexevs.uri.UriResolver;
 import javax.annotation.Resource;
 import org.LexGrid.LexBIG.DataModel.Core.CodingSchemeVersionOrTag;
 import org.LexGrid.LexBIG.Exceptions.LBException;
@@ -26,9 +25,7 @@ import org.LexGrid.codingSchemes.CodingScheme;
  * @author <a href="mailto:kevin.peterson@mayo.edu">Kevin Peterson</a>
  */
 public abstract class AbstractLexEvsCodeSystemService<T> extends AbstractLexEvsService {
-	
-	@Resource
-	private UriResolver uriResolver;
+
 	
 	@Resource
 	private VersionNameConverter versionNameConverter;

@@ -9,8 +9,7 @@
 package edu.mayo.cts2.framework.service.lexevs.naming;
 
 import edu.mayo.cts2.framework.service.lexevs.event.LexEvsChangeEventObserver;
-import edu.mayo.cts2.framework.service.lexevs.uri.UriResolver;
-import edu.mayo.cts2.framework.service.lexevs.uri.UriResolver.IdType;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
@@ -32,9 +31,6 @@ public class DefaultCodingSchemeNameTranslator implements
 	private static final int FLUSH_PERIOD_MINUTES = 60;
 
 	private Logger log = LogManager.getLogger(this.getClass());
-
-	@Resource
-	private UriResolver uriResolver;
 
 	@Resource
 	private LexBIGService lexBigService;
@@ -59,26 +55,8 @@ public class DefaultCodingSchemeNameTranslator implements
 			try {
 				for (CodingSchemeRendering csr : this.lexBigService
 						.getSupportedCodingSchemes().getCodingSchemeRendering()) {
-					String lexgridName = csr.getCodingSchemeSummary()
-							.getLocalName();
-					String officialName = this.uriResolver.idToName(
-							lexgridName, IdType.CODE_SYSTEM);
-					if (StringUtils.isNotBlank(officialName)) {
-						this.aliasToLexGridMap.put(officialName, lexgridName);
-						
-						String uri = this.uriResolver.idToUri(officialName, IdType.CODE_SYSTEM);
-						String baseUri = this.uriResolver.idToBaseUri(officialName);
-						
-						if(StringUtils.isNotBlank(uri)){
-							this.aliasToLexGridMap.put(uri, lexgridName);
-						}
-						if(StringUtils.isNotBlank(baseUri)){
-							this.aliasToLexGridMap.put(baseUri, lexgridName);
-						}
 
-						this.lexgridToAliasMap.put(lexgridName, officialName);
-						
-					}
+				
 					this.lexgridUriToLexGridNameMap.put(csr.getCodingSchemeSummary().getCodingSchemeURI(), csr.getCodingSchemeSummary().getLocalName());
 				}
 			} catch (LBInvocationException e) {
