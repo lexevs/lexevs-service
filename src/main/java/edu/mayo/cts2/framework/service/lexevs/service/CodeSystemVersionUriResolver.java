@@ -10,7 +10,6 @@ package edu.mayo.cts2.framework.service.lexevs.service;
 
 import edu.mayo.cts2.framework.service.lexevs.naming.NameVersionPair;
 import edu.mayo.cts2.framework.service.lexevs.uri.UriHandler;
-import edu.mayo.cts2.framework.service.lexevs.uri.UriResolver;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
@@ -34,9 +33,6 @@ public class CodeSystemVersionUriResolver implements InitializingBean {
 
 	@Resource
 	private UriHandler uriHandler;
-	
-	@Resource
-	private UriResolver uriResolver;
 
 	@Resource
 	private LexBIGService lexBigService;
