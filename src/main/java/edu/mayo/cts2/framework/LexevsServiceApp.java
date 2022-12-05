@@ -8,7 +8,6 @@ import org.springframework.context.annotation.ImportResource;
 
 
 @SpringBootApplication
-@EnableAutoConfiguration
 @ImportResource("classpath:spring/root-context.xml")
 public class LexevsServiceApp extends SpringBootServletInitializer{
     public static void main(String[] args) {

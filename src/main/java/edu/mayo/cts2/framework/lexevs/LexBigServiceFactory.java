@@ -12,6 +12,7 @@ import java.util.Map;
 
 import javax.annotation.PostConstruct;
 
+import org.LexGrid.LexBIG.Exceptions.LBException;
 import org.LexGrid.LexBIG.Impl.LexBIGServiceImpl;
 import org.LexGrid.LexBIG.LexBIGService.LexBIGService;
 import org.apache.commons.lang.StringUtils;
@@ -46,7 +47,7 @@ public class LexBigServiceFactory implements FactoryBean<LexBIGService>, Disposa
 	 * @see org.springframework.beans.factory.FactoryBean#getObject()
 	 */
 	@Override
-	public LexBIGService getObject() throws Exception {
+	public LexBIGService getObject() throws InterruptedException {
 		while(! this.hasBeenConfigured){
 			this.log.warn("Waiting for the Configuration Service to start...");
 			Thread.sleep(4000);
@@ -79,7 +80,7 @@ public class LexBigServiceFactory implements FactoryBean<LexBIGService>, Disposa
 	}
 	
 	@Override
-	public void destroy() throws Exception {
+	public void destroy() throws LBException {
 		if(this.lexBIGService != null){
 			log.info("Shutting down local LexEVS.");
 			this.lexBIGService.getServiceManager(null).shutdown();
