@@ -72,7 +72,7 @@ public class CodeSystemVersionBulkDownloadController extends AbstractBulkDownloa
 	private Set<CodingSchemeReference> nciMetaExclusions;
 	
 	
-	public void afterPropertiesSet() throws Exception {
+	public void afterPropertiesSet()  {
 		this.meddraExclusions = this.getMeddraCodingSchemes();
 		this.nciMetaExclusions = this.getNciMetaCodingSchemes();
 	}

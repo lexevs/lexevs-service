@@ -32,11 +32,11 @@ public class DefaultResolvedValueSetNameTranslator
 			new HashMap<String,ResolvedValueSetNameTriple>();
 	
 	@Override
-	public void afterPropertiesSet() throws Exception {
+	public void afterPropertiesSet() {
 		this.buildCaches();
 	}
 	
-	public void buildCaches() throws Exception {
+	public void buildCaches() {
 		this.valueSetToNameVersionMap.clear();
 		this.uriToValueSetToNameVersionMap.clear();
 		

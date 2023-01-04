@@ -68,7 +68,7 @@ public class ServiceBuilder implements InitializingBean {
 	private static String UNSPECIFIED = "unspecified";
 	
 	@Override
-	public void afterPropertiesSet() throws Exception {
+	public void afterPropertiesSet() {
 		Assert.notNull(this.serverContext);
 		
 		this.urlConstructor = new UrlConstructor(this.serverContext);

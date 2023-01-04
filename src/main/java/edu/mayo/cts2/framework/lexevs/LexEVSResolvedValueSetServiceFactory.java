@@ -31,7 +31,7 @@ public class LexEVSResolvedValueSetServiceFactory implements
 	private LexBIGService lbs;
 
 	@Override
-	public LexEVSResolvedValueSetService getObject() throws Exception {	
+	public LexEVSResolvedValueSetService getObject() {
 		// get lbconfig properties
 		SystemVariables variables = LexEvsServiceLocator.getInstance().getSystemResourceService().getSystemVariables();
 		String csTag = variables.getAssertedValueSetCodingSchemeTag();
