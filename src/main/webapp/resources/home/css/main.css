@@ -99,6 +99,7 @@ OTHERS
 
 .box {min-height:1px; _height:1%;}
 .box:after {display:block; visibility:hidden; clear:both; line-height:0; font-size:0; content:".";}
+.footy {min-height:1px; _height:1%;text-align: center}
 .fix {float:none; clear:both; width:0; height:0; margin:0; padding:0; border:0; line-height:0; font-size:0;}
 .f-left {float:left !important;}
 .f-right {float:right !important;}
@@ -118,3 +119,8 @@ OTHERS
 .input-text {padding:5px;}
 .input-submit {padding:3px;}
 
+.f-center {
+    font-size: 8pt;
+    text-align: center;
+    float: bottom;
+}
