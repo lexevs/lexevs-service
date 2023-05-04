@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!--<!DOCTYPE taglib xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd" version="2.1";>-->
+<!--<!DOCTYPE taglib xmlns="http://java.sun.com/xml/ns/javaee">-->
+<taglib>
+    <tlib-version>2.1</tlib-version>
+    <jsp-version>2.1</jsp-version>
+    <short-name>beans</short-name>
+    <uri>http://informatics.mayo.edu/cts2/framework#beans</uri>
+    <description>Bean inspector.</description>
+    <display-name>Bean inspector utils</display-name>
+    <function>
+        <name>inspect</name>
+        <function-class>edu.mayo.cts2.framework.webapp.rest.view.jsp.Beans</function-class>
+        <function-signature>
+            java.util.List inspect(java.lang.Object)
+        </function-signature>
+    </function>
+    <function>
+        <name>shouldRecurse</name>
+        <function-class>edu.mayo.cts2.framework.webapp.rest.view.jsp.Beans</function-class>
+        <function-signature>
+            boolean shouldRecurse(java.lang.Object)
+        </function-signature>
+    </function>
+    <function>
+        <name>capitalize</name>
+        <function-class>edu.mayo.cts2.framework.webapp.rest.view.jsp.Beans</function-class>
+        <function-signature>
+            java.lang.String capitalize(java.lang.String)
+        </function-signature>
+    </function>
+    <function>
+        <name>summary</name>
+        <function-class>edu.mayo.cts2.framework.webapp.rest.view.jsp.Beans</function-class>
+        <function-signature>
+            java.util.Map summary(java.lang.Object)
+        </function-signature>
+    </function>
+</taglib>
