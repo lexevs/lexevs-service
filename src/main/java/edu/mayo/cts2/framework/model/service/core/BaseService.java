@@ -35,6 +35,11 @@ implements java.io.Serializable
      */
     private String _serviceName;
 
+/**
+ * The version of LexEVS that this service is based on.
+ */
+    private String _lexevsVersion;
+
     /**
      * A description of the service, its use, etc.
      */
@@ -992,6 +997,10 @@ implements java.io.Serializable
     public void setSupportedProfileAsReference(
             final java.util.List<ProfileElement> supportedProfileList) {
         this._supportedProfileList = supportedProfileList;
+    }
+
+    public void setlexevsVersion(final String lexevsVersion) {
+            this._lexevsVersion = lexevsVersion;
     }
 
     /**

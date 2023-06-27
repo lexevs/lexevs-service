@@ -11,6 +11,7 @@ import edu.mayo.cts2.framework.model.util.ModelUtils;
 import edu.mayo.cts2.framework.service.profile.BaseServiceService;
 import edu.mayo.cts2.framework.webapp.ConformanceFactory;
 import java.util.Set;
+import java.util.TreeSet;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.collections4.CollectionUtils;
@@ -38,6 +39,9 @@ public class BaseController extends AbstractMessageWrappingController {
 	@Value("#{buildProperties.description}")
 	private String buildDescription;
 
+	@Value("#{buildProperties.lexevsVersion}")
+	private String lexevsVersion;
+
 	@RequestMapping(value="/service", method=RequestMethod.GET)
 	public Object getServiceInfo(HttpServletRequest request) {
 		
@@ -61,6 +65,12 @@ public class BaseController extends AbstractMessageWrappingController {
 				service.setServiceVersion(this.baseServiceService.getServiceVersion());
 			} catch (UnsupportedOperationException e) {
 				service.setServiceVersion(buildVersion);
+			}
+
+			try {
+				service.setlexevsVersion(this.baseServiceService.getLexevsVersion());
+			} catch (UnsupportedOperationException e) {
+				service.setlexevsVersion(lexevsVersion);
 			}
 			
 			try {

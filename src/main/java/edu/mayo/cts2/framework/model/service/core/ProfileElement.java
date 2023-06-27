@@ -15,8 +15,8 @@ import java.util.Collections;
  * @version $Revision$ $Date$
  */
 @SuppressWarnings("serial")
-public class ProfileElement extends edu.mayo.cts2.framework.model.BaseCts2ModelObject 
-implements java.io.Serializable
+public class ProfileElement extends edu.mayo.cts2.framework.model.BaseCts2ModelObject  implements Comparable
+, java.io.Serializable
 {
 
 
@@ -354,6 +354,28 @@ implements java.io.Serializable
     public void setStructuralProfile(
             final edu.mayo.cts2.framework.model.service.core.types.StructuralProfile structuralProfile) {
         this._structuralProfile = structuralProfile;
+    }
+
+
+    public int compareTo(ProfileElement o) {
+        if(o.getStructuralProfile().equals(this.getStructuralProfile())){
+            //compare functional profiles
+                return o.getFunctionalProfile().toString().compareTo(this.getFunctionalProfile().toString());
+        } else {
+            String a = o.getStructuralProfile().toString() + o.getFunctionalProfile().toString();
+            String b = this.getStructuralProfile().toString() + this.getFunctionalProfile().toString();
+            return a.compareTo(b);
+
+            }
+
+    }
+
+    public int compareTo(Object o) {
+        if(o instanceof ProfileElement){
+            return compareTo((ProfileElement)o);
+        } else {
+            return 0;
+        }
     }
 
     /**

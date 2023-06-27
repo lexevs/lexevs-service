@@ -31,6 +31,7 @@ import edu.mayo.cts2.framework.service.provider.ServiceProvider;
 import edu.mayo.cts2.framework.service.provider.ServiceProviderFactory;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 import javax.annotation.Resource;
 import org.reflections.Reflections;
 import org.springframework.beans.factory.InitializingBean;
@@ -66,7 +67,7 @@ public class ClassPathScanningConformanceFactory implements ConformanceFactory, 
 	 */
 	@Override
 	public Set<ProfileElement> getProfileElements(){
-		Set<ProfileElement> returnSet = new HashSet<ProfileElement>();
+		Set<ProfileElement> returnSet = new TreeSet<ProfileElement>();
 		
 		ServiceProvider provider = 
 			this.serviceProviderFactory.getServiceProvider();

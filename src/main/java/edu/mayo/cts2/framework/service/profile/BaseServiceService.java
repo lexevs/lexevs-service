@@ -78,11 +78,18 @@ public interface BaseServiceService extends Cts2Profile {
 
 	/**
 	 * Gets the known namespace list for all services of this implementation.
-	 * 
+	 *
 	 * Individual services may only support a subset of this list, but may not
 	 * support namespaces not returned here.
 	 *
 	 * @return the known namespace list
 	 */
 	public List<DocumentedNamespaceReference> getKnownNamespaceList();
+
+	/**
+	 * Gets the specified LexEVS build version from build.properties.
+	 *
+	 * @return the known LexEVS version
+	 */
+    public String getLexevsVersion();
 }
