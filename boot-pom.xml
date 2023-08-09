@@ -15,7 +15,7 @@
     <name>CTS2 Framework</name>
     <description>Framework supporting CTS2. Contains model for query</description>
     <properties>
-        <org.spring-version>5.3.21</org.spring-version>
+        <org.spring-version>5.3.29</org.spring-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <test.permgen.max>500m</test.permgen.max>
         <java.version>1.8</java.version>
