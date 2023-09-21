@@ -11,7 +11,7 @@ package edu.mayo.cts2.framework.service.lexevs.naming;
 import edu.mayo.cts2.framework.service.lexevs.event.LexEvsChangeEventObserver;
 import java.util.HashMap;
 import java.util.Map;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.LexGrid.LexBIG.Exceptions.LBException;
 import org.LexGrid.codingSchemes.CodingScheme;
 import org.lexgrid.resolvedvalueset.LexEVSResolvedValueSetService;

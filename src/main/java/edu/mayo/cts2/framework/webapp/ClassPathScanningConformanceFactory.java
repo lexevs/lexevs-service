@@ -31,7 +31,7 @@ import edu.mayo.cts2.framework.service.provider.ServiceProvider;
 import edu.mayo.cts2.framework.service.provider.ServiceProviderFactory;
 import java.util.HashSet;
 import java.util.Set;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.reflections.Reflections;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;

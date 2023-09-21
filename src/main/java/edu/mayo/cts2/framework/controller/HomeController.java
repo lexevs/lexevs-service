@@ -1,7 +1,7 @@
 package edu.mayo.cts2.framework.controller;
 
 import edu.mayo.cts2.framework.webapp.rest.config.RestConfig;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;

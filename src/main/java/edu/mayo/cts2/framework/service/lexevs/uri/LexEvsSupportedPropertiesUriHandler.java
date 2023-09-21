@@ -8,7 +8,7 @@
 */
 package edu.mayo.cts2.framework.service.lexevs.uri;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.LexGrid.LexBIG.DataModel.Core.CodingSchemeSummary;
 import org.LexGrid.LexBIG.DataModel.Core.ResolvedCodedNodeReference;
 import org.LexGrid.LexBIG.Exceptions.LBException;

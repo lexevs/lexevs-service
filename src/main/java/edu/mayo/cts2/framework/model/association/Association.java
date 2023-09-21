@@ -11,13 +11,11 @@ import edu.mayo.cts2.framework.model.core.Property;
 import edu.mayo.cts2.framework.model.core.ReasoningAlgorithmReference;
 import edu.mayo.cts2.framework.model.core.StatementTarget;
 import edu.mayo.cts2.framework.service.core.xml.Cts2XMLMarshaller;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 import java.util.Collections;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-
-import static org.springframework.http.RequestEntity.put;
 
 /**
  * A "semantic" assertion about a relationship between a subject

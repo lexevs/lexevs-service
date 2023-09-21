@@ -27,7 +27,7 @@ import edu.mayo.cts2.framework.service.core.json.JsonConverter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.HttpOutputMessage;

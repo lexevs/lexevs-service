@@ -13,7 +13,7 @@ import edu.mayo.cts2.framework.model.service.core.NameOrURI;
 import edu.mayo.cts2.framework.service.lexevs.naming.CodingSchemeNameTranslator;
 import edu.mayo.cts2.framework.service.lexevs.naming.NameVersionPair;
 import edu.mayo.cts2.framework.service.lexevs.naming.VersionNameConverter;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.LexGrid.LexBIG.DataModel.Core.CodingSchemeVersionOrTag;
 import org.LexGrid.LexBIG.Exceptions.LBException;
 import org.LexGrid.LexBIG.Utility.Constructors;

@@ -19,7 +19,7 @@ import edu.mayo.cts2.framework.service.lexevs.utility.Constants;
 import edu.mayo.cts2.framework.service.profile.map.MapReadService;
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.LexGrid.LexBIG.Exceptions.LBParameterException;
 import org.LexGrid.LexBIG.Extensions.Generic.MappingExtension;
 import org.LexGrid.LexBIG.Utility.Constructors;

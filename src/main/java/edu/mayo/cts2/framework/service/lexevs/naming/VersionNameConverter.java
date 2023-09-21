@@ -8,7 +8,7 @@
 */
 package edu.mayo.cts2.framework.service.lexevs.naming;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
 

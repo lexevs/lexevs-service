@@ -10,7 +10,7 @@ package edu.mayo.cts2.framework.service.lexevs.service.entity;
 
 import edu.mayo.cts2.framework.model.core.ScopedEntityName;
 import edu.mayo.cts2.framework.service.lexevs.naming.CodingSchemeNameTranslator;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.springframework.stereotype.Component;
 

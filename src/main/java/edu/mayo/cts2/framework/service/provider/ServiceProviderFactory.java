@@ -26,7 +26,7 @@ package edu.mayo.cts2.framework.service.provider;
 
 import java.util.HashSet;
 import java.util.Set;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.apache.commons.lang.BooleanUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

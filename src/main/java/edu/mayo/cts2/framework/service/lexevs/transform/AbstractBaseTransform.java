@@ -13,7 +13,7 @@ import edu.mayo.cts2.framework.service.lexevs.naming.CodingSchemeNameTranslator;
 import edu.mayo.cts2.framework.service.lexevs.naming.VersionNameConverter;
 import edu.mayo.cts2.framework.service.lexevs.uri.UriHandler;
 import edu.mayo.cts2.framework.service.lexevs.utility.XmlUtils;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

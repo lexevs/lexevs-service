@@ -26,7 +26,7 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.LexGrid.LexBIG.Exceptions.LBException;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;

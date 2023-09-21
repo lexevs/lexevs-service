@@ -8,7 +8,7 @@
 */
 package edu.mayo.cts2.framework.lexevs;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.LexGrid.LexBIG.LexBIGService.LexBIGService;
 import org.lexgrid.valuesets.LexEVSValueSetDefinitionServices;
 import org.lexgrid.valuesets.impl.LexEVSValueSetDefinitionServicesImpl;

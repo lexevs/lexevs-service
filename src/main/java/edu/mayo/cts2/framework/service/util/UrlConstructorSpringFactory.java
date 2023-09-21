@@ -26,7 +26,7 @@ package edu.mayo.cts2.framework.service.util;
 
 import edu.mayo.cts2.framework.service.core.url.UrlConstructor;
 import edu.mayo.cts2.framework.service.core.util.ConfigManager;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.FactoryBean;

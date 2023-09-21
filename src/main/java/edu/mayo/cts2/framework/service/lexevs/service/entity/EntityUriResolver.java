@@ -11,7 +11,7 @@ package edu.mayo.cts2.framework.service.lexevs.service.entity;
 import edu.mayo.cts2.framework.model.core.ScopedEntityName;
 import edu.mayo.cts2.framework.service.lexevs.uri.UriUtils;
 import java.util.Arrays;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.LexGrid.LexBIG.Exceptions.LBException;
 import org.LexGrid.LexBIG.LexBIGService.LexBIGService;
 import org.LexGrid.codingSchemes.CodingScheme;

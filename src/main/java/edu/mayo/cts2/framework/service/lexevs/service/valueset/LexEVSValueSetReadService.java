@@ -18,7 +18,7 @@ import edu.mayo.cts2.framework.service.profile.valueset.ValueSetReadService;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.LexGrid.LexBIG.Exceptions.LBException;
 import org.springframework.stereotype.Component;
 

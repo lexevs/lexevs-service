@@ -10,7 +10,7 @@ package edu.mayo.cts2.framework.service.lexevs.bulk;
 
 import edu.mayo.cts2.framework.controller.ControllerProvider;
 import java.io.IOException;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 import org.apache.commons.io.IOUtils;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;

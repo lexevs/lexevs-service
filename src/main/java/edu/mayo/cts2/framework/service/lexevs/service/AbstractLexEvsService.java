@@ -13,7 +13,7 @@ import edu.mayo.cts2.framework.model.core.SourceReference;
 import edu.mayo.cts2.framework.model.util.ModelUtils;
 import edu.mayo.cts2.framework.service.lexevs.naming.ValueSetNameTranslator;
 import edu.mayo.cts2.framework.service.profile.BaseService;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.LexGrid.LexBIG.LexBIGService.LexBIGService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

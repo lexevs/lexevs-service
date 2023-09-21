@@ -8,9 +8,7 @@
 */
 package edu.mayo.cts2.framework.lexevs;
 
-import java.util.Map;
-
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 import org.LexGrid.LexBIG.Exceptions.LBException;
 import org.LexGrid.LexBIG.Impl.LexBIGServiceImpl;

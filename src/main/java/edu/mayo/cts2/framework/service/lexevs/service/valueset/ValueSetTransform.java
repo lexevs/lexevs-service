@@ -17,7 +17,7 @@ import edu.mayo.cts2.framework.model.valueset.ValueSetCatalogEntrySummary;
 import edu.mayo.cts2.framework.service.lexevs.naming.ValueSetNamePair;
 import edu.mayo.cts2.framework.service.lexevs.naming.ValueSetNameTranslator;
 import edu.mayo.cts2.framework.service.lexevs.transform.AbstractBaseTransform;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.LexGrid.valueSets.ValueSetDefinition;
 import org.springframework.stereotype.Component;
 

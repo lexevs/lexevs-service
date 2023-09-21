@@ -36,7 +36,7 @@ import edu.mayo.cts2.framework.service.lexevs.transform.AbstractBaseTransform;
 import edu.mayo.cts2.framework.service.lexevs.uri.UriHandler;
 import edu.mayo.cts2.framework.service.lexevs.uri.UriUtils;
 import java.net.URI;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.LexGrid.LexBIG.Exceptions.LBException;
 import org.LexGrid.LexBIG.LexBIGService.LexBIGService;
 import org.LexGrid.codingSchemes.CodingScheme;

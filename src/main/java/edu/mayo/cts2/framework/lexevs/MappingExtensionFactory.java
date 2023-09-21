@@ -8,7 +8,7 @@
 */
 package edu.mayo.cts2.framework.lexevs;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.LexGrid.LexBIG.Extensions.Generic.MappingExtension;
 import org.LexGrid.LexBIG.LexBIGService.LexBIGService;
 import org.springframework.beans.factory.FactoryBean;

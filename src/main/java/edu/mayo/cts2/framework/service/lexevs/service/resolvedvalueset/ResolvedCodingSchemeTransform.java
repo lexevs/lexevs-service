@@ -28,7 +28,7 @@ import edu.mayo.cts2.framework.service.lexevs.uri.UriHandler;
 import edu.mayo.cts2.framework.service.lexevs.utility.CommonResolvedValueSetUtils;
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.LexGrid.codingSchemes.CodingScheme;
 import org.LexGrid.commonTypes.Property;
 import org.LexGrid.commonTypes.PropertyQualifier;
