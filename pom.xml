@@ -347,7 +347,7 @@
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
-            <version>3.0.11</version>
+            <version>3.0.19</version>
             <scope>provided</scope>
             <type>pom</type>
             <exclusions>
