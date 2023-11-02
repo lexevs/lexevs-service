@@ -1,5 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+<script>
+	function includeHTML() {
+		var z, i, elmnt, file, xhttp;
+		/* Loop through a collection of all HTML elements: */
+		z = document.getElementsByTagName("*");
+		for (i = 0; i &lt; z.length; i++) {
+			elmnt = z[i];
+			/*search for elements with a certain atrribute:*/
+			file = elmnt.getAttribute("w3-include-html");
+			if (file) {
+				/* Make an HTTP request using the attribute value as the file name: */
+				xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4) {
+						if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+						if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+						/* Remove the attribute, and call this function once more: */
+						elmnt.removeAttribute("w3-include-html");
+						includeHTML();
+					}
+				}
+				xhttp.open("GET", file, true);
+				xhttp.send();
+				/* Exit the function: */
+				return;
+			}
+		}
+	}
+	function UrlExists(url)
+	{
+		var http = new XMLHttpRequest();
+		http.open('HEAD', url, false);
+		http.send();
+		return http.status!=404;
+	}
+
+</script>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="content-language" content="en" />
@@ -12,6 +49,8 @@
 	<script type="text/javascript" src="javascript/jquery.nivo.js"></script>
 	<script type="text/javascript" src="javascript/cufon-yui.js"></script>
 	<script type="text/javascript" src="javascript/font.font.js"></script>
+	<script src="https://cbiit.github.io/nci-softwaresolutions-elements/components/include-html.js"></script>
+
 	<script type="text/javascript">
 	Cufon.replace('h1, h2', {hover:true});
 	$(window).load(function() {
@@ -35,6 +74,7 @@
 		slideshowEnd:function(){}
 		});
 	});
+	
 	</script>
 	<title>CTS2 Development Framework</title>
 </head>
@@ -42,17 +82,18 @@
 <body id="hp"> <!-- APPLY CSS STYLES FOR HOMEPAGE -->
 <div class="skipNav"><a href="#content">Skip to Content</a></div>
 <div id="main">
-
 	<!-- HEADER -->
 	<div id="header" class="box" style="background-color: #0063DC">
-
-		<p></p>
 		<h2>NATIONAL CANCER INSTITUTE - CANCER.GOV</h2>
-<p></p>
-		
+		<include-html src="https://cbiit.github.io/nci-softwaresolutions-elements/banners/government-shutdown-test.html"></include-html>
+
+		<p>
+
+		</p>
 
 	</div> <!-- /header -->
 	<div id="subheader" class="box" style="background-color: #1c94c4">
+
 		<p></p>
 		<h3>Welcome to the CTS2 Development Framework!</h3>
 		<p></p>
