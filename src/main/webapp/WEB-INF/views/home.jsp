@@ -15,6 +15,7 @@ pageEncoding="UTF-8"%>
 	<script type="text/javascript" src="resources/home/javascript/jquery.nivo.js"></script>
 	<script type="text/javascript" src="resources/home/javascript/cufon-yui.js"></script>
 	<script type="text/javascript" src="resources/home/javascript/font.font.js"></script>
+	<script type="text/javascript" src="javascript/include-html.js"></script>
 	<script type="text/javascript">
 	Cufon.replace('h1, h2', {hover:true});
 	$(window).load(function() {
@@ -182,13 +183,28 @@ pageEncoding="UTF-8"%>
 	
 	<!-- FOOTER -->
 	<div id="footer" class="box">
+		<style>
+			.page-footer {
+				background-color: #97d4ea;
+				border-top: 1px solid #ddd;
+				padding: 19px 0;
+				margin-top: 20px;
+			}
+		</style>
+		<div class="f-center" style="background-color: #1c94c4">
 
-		<!-- Would you like to remove this line? Visit www.templatesdock.com/terms.php -->
-		<p class="f-right t-right"><a href="http://www.templatesdock.com/">Free web templates</a> by TemplatesDock<br /><span class="smaller">Tip: <a href="http://www.nuvio.cz/">Webdesign</a></span></p>
-		<!-- Would you like to remove this line? Visit www.templatesdock.com/terms.php -->
-	
-		<p class="f-left">Copyright &copy;&nbsp;2011 <a href="#">Bestfolio</a>, All Rights Reserved &reg;</p>
-
+			<p><a href="http://www.cancer.gov" target="_blank" alt="National Cancer Institute">NCI Home</a>|
+				<a href="mailto:NCIThesaurus@mail.nih.gov">Contact Us</a>|
+				<a href="http://www.cancer.gov/policies" target="_blank" alt="National Cancer Institute Policies">Policies</a>|
+				<a href="http://www.cancer.gov/policies/page3" target="_blank" alt="National Cancer Institute Accessibility">Accessibility</a>|
+				<a href="http://www.cancer.gov/policies/page6" target="_blank" alt="National Cancer Institute FOIA">FOIA</a>|
+				<a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html" alt="HHS Vulnerability Disclosure">HHS Vulnerability Disclosure</a>
+			</p>
+			<p> <a href="http://www.hhs.gov/" alt="U.S. Department of Health and Human Services">  U.S. Department of Health and Human Services</a>&nbsp;|&nbsp;
+				<a href="https://www.nih.gov/about-nih" alt="National Institutes of Health">National Institutes of Health</a>&nbsp;|&nbsp;
+				<a href="http://www.cancer.gov/" alt="National Cancer Institute">National Cancer Institute</a>&nbsp;|&nbsp;
+				<a href="https://www.usa.gov/" alt="USA.gov">USA.gov</a>
+			</p>
 	</div> <!-- /footer -->
 
 </div> <!-- /main -->
