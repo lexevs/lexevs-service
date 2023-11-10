@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta name="description" content="CTS2 is a REST based query system for searching vocabularies published by EVS. This page is informational only." />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/nivo.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/skin.css" />	
+	<!--[if IE 6]>
+	<script src="../../java/templates/javascript/pngfix.js"></script>
+	<script>DD_belatedPNG.fix('#logo img, #nav li a, #nav li a span, #nav-icons img, #twitter, #imac');</script>
+	<![endif]-->
+	<script type="text/javascript" src="classes/javascript/jquery.js"></script>
+	<script type="text/javascript" src="classes/javascript/jquery.nivo.js"></script>
+	<script type="text/javascript" src="classes/javascript/cufon-yui.js"></script>
+	<script type="text/javascript" src="classes/javascript/font.font.js"></script>
+	<script type="text/javascript" src="classes/javascript/include-html.js"></script>
+<!--	<script type="text/javascript" src="javascript/include-html.js"></script>-->
+	<script src="https://cbiit.github.io/nci-softwaresolutions-elements/components/include-html.js"></script>
+
+	<script type="text/javascript">
+	Cufon.replace('h1, h2', {hover:true});
+	$(window).load(function() {
+		$('#slider').nivoSlider({
+		effect:'sliceDown',
+		slices:20,
+		animSpeed:500,
+		pauseTime:3000,
+		startSlide:0,
+		directionNav:false,
+		directionNavHide:false,
+		controlNav:false,
+		controlNavThumbs:false,
+		controlNavThumbsFromRel:false,
+		keyboardNav:false,
+		pauseOnHover:true,
+		manualAdvance:false,
+		captionOpacity:0.5,
+		beforeChange:function(){},
+		afterChange:function(){},
+		slideshowEnd:function(){}
+		});
+	});
+
+	</script>
+	<title>CTS2 Development Framework</title>
+</head>
+
+<body id="hp"> <!-- APPLY CSS STYLES FOR HOMEPAGE -->
+<div class="skipNav"><a href="#content">Skip to Content</a></div>
+<div id="main">
+	<!-- HEADER -->
+	<div id="header" class="box" style="background-color: #0063DC">
+		<h2>NATIONAL CANCER INSTITUTE - CANCER.GOV</h2>
+
+
+		<p>
+			<include-html src="https://cbiit.github.io/nci-softwaresolutions-elements/banners/government-shutdown-test.html"></include-html>
+		</p>
+
+	</div> <!-- /header -->
+	<div id="subheader" class="box" style="background-color: #1c94c4">
+
+		<p></p>
+		<h3>Welcome to the CTS2 Development Framework!</h3>
+		<p></p>
+
+	</div>
+
+	<!-- WELCOME -->
+	<div id="welcome" class="box">
+
+		<div id="welcome-inner">
+
+			<p>To find out more about this service, visit the 
+				<a href="https://lexevscts2docs.nci.nih.gov/cts2">service</a> page. This will give you an indication of what is available, as well as how to
+				use this service. For more information about what makes up CTS2, visit the links below</a>.
+			</p>
+		
+		</div> <!-- /welcome-inner -->
+
+		
+		<div id="imac">
+		
+			<!-- REPLACE THESE 3 IMAGES WITH YOUR OWN IMAGES (WIDTH:371, HEIGHT:211) -->
+			<div id="slider" class="nivoSlider">
+				<img src="images/cts2slide.png" alt="" />
+				<img src="images/dflogo-large.png" alt="" />
+				<img src="images/omg.jpg" alt="" />	
+			</div> <!-- /slider -->
+			
+		</div> <!-- /imac -->
+		
+	</div> <!-- /welcome -->
+	
+	<!-- COLUMNS -->
+	<div id="section" class="box">
+
+		<!-- CONTENT -->
+		<div id="content">
+
+			<h2 class="nom">Learn More about CTS2</h2>		
+			
+			<ul class="products">
+				<li class="box">
+
+					<!-- Photo: (c) Nic McPhee -->
+					<div class="products-desc">
+						<h3><a href="https://lexevscts2docs.nci.nih.gov/cts2">CTS2 Docs</a></h3>
+						<p>Common Terminology Services 2 (CTS2) is an Object Management Group (OMG) specification for representing, accessing and disseminating terminological content.
+						Learn more about CTS2, the specification, and what it can do for you.</p>
+					</div> <!-- /products-desc -->
+				</li>
+				<li class="box">
+
+					<!-- Photo: (c) Nic McPhee -->
+					<div class="products-desc">
+						<h3><a href="https://github.com/lexevs/lexevs-service">CTS2</a></h3>
+						<p>Common Terminology Services 2 (CTS2) is an Object Management Group (OMG) specification for representing, accessing and disseminating terminological content.
+						Learn more about CTS2, the specification, and what it can do for you.</p>
+					</div> <!-- /products-desc -->
+				</li>
+				<li class="last box">
+
+					<div class="products-desc">
+						<h3><a href="https://www.omg.org/cts2/">Official OMG© Specification</a></h3>
+						<p>CTS2 is an Official Object Management Group© (OMG) Specification. Go here to see the specification, which includes Platfrom Independent UML® Models, as well as Platform Specific bindings
+						to REST implementations.</p>
+					</div> <!-- /products-desc -->
+				</li>
+			</ul>
+		
+		</div> <!-- /content -->
+
+		<!-- SIDEBAR -->
+		<div id="aside">
+
+			<h2 class="nom">Where to go from here?</h2>
+					<h3><a href="https://wiki.nci.nih.gov/display/LexEVS/LexEVS+6.x+REST+CTS2+Service">Learn more about this service</a> on our wiki.</h3>
+			</ul>
+		
+		</div> <!-- /aside -->
+
+	</div> <!-- /section -->
+
+	<!-- CONTACT -->
+	<div id="contact">
+
+		<address>
+			CTS2 Development Framework <span>|</span>
+			<a href="mailto:NCIAppSupport@nih.gov">NCIAppSupport@nih.gov</a> <span>|</span>
+		</address>		
+
+	</div> <!-- /contact -->	
+	
+	<!-- FOOTER -->
+	<div id="footer" class="box">
+		<style>
+			.page-footer {
+				background-color: #97d4ea;
+				border-top: 1px solid #ddd;
+				padding: 19px 0;
+				margin-top: 20px;
+			}
+		</style>
+		<div class="f-center" style="background-color: #1c94c4">
+
+		<p><a href="http://www.cancer.gov" target="_blank" alt="National Cancer Institute">NCI Home</a>|
+		<a href="mailto:NCIThesaurus@mail.nih.gov">Contact Us</a>|
+		<a href="http://www.cancer.gov/policies" target="_blank" alt="National Cancer Institute Policies">Policies</a>|
+		<a href="http://www.cancer.gov/policies/page3" target="_blank" alt="National Cancer Institute Accessibility">Accessibility</a>|
+		<a href="http://www.cancer.gov/policies/page6" target="_blank" alt="National Cancer Institute FOIA">FOIA</a>|
+		<a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html" alt="HHS Vulnerability Disclosure">HHS Vulnerability Disclosure</a>
+		</p>
+		<p> <a href="http://www.hhs.gov/" alt="U.S. Department of Health and Human Services">  U.S. Department of Health and Human Services</a>&nbsp;|&nbsp;
+		<a href="https://www.nih.gov/about-nih" alt="National Institutes of Health">National Institutes of Health</a>&nbsp;|&nbsp;
+		<a href="http://www.cancer.gov/" alt="National Cancer Institute">National Cancer Institute</a>&nbsp;|&nbsp;
+		<a href="https://www.usa.gov/" alt="USA.gov">USA.gov</a>
+		</p>
+
+
+		</div>
+	</div> <!-- /footer -->
+
+</div> <!-- /main -->
+
+<script type="text/javascript"> Cufon.now(); </script>
+
+</body>
+</html>
