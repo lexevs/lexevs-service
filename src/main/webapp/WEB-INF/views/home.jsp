@@ -44,7 +44,7 @@ pageEncoding="UTF-8"%>
 </head>
 
 <body id="hp"> <!-- APPLY CSS STYLES FOR HOMEPAGE -->
-<include-html src="https://cbiit.github.io/nci-softwaresolutions-elements/banners/government-shutdown-test.html"></include-html>
+<include-html src="https://cbiit.github.io/nci-softwaresolutions-elements/banners/government-shutdown.html"></include-html>
 
 <div id="main">
 
