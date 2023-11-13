@@ -34,7 +34,7 @@ public class HomeController {
 			if (StringUtils.isNotBlank(alternateHomePage)) {
 				return new ModelAndView("redirect:" + alternateHomePage);
 			} else {
-				return new ModelAndView("index");
+				return new ModelAndView("index.html");
 			}
 		} else {
 			throw new HomePageDisabledException();
