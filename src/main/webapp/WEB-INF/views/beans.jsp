@@ -7,9 +7,9 @@
 <html>
 <head>
 
-	<script type="text/javascript" src="${urlBase}/resources/common/include/js/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="${urlBase}/resources/beans/include/js/jquery.ba-bbq.min.js"></script>
-	<script type="text/javascript" src="${urlBase}/resources/beans/include/js/CollapsibleLists.compressed.js"></script>
+	<script type="text/javascript" src="${urlBase}/resources/common/include/js/jquery-3.7.1.min.js"></script>
+<%--	<script type="text/javascript" src="${urlBase}/resources/beans/include/js/jquery.ba-bbq.min.js"></script>--%>
+<%--	<script type="text/javascript" src="${urlBase}/resources/beans/include/js/CollapsibleLists.compressed.js"></script>--%>
 	<link rel="stylesheet" media="screen,projection" type="text/css" href="${urlBase}/resources/beans/beans.css" />
 
 <script type="text/javascript">
