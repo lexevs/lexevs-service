@@ -56,7 +56,7 @@ public class ClassPathScanningConformanceFactory implements ConformanceFactory, 
 	 */
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		Assert.notNull(this.serverContext);
+		Assert.notNull(this.serverContext,"serverContext is required");
 		
 		this.urlConstructor = new UrlConstructor(this.serverContext);
 	}

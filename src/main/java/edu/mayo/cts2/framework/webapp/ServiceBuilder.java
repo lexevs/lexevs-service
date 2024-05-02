@@ -69,7 +69,7 @@ public class ServiceBuilder implements InitializingBean {
 	
 	@Override
 	public void afterPropertiesSet() {
-		Assert.notNull(this.serverContext);
+		Assert.notNull(this.serverContext,"serverContext must be set");
 		
 		this.urlConstructor = new UrlConstructor(this.serverContext);
 	}

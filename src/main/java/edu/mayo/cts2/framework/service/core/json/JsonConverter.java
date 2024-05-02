@@ -158,7 +158,7 @@ public class JsonConverter {
 		Set<Entry<String, JsonElement>> entrySet = element.getAsJsonObject()
 				.entrySet();
 
-		Assert.isTrue(entrySet.size() == 1);
+		Assert.isTrue(entrySet.size() == 1,"size 1");
 
 		T obj = gson.fromJson(entrySet.iterator().next().getValue(), clazz);
 

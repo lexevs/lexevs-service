@@ -15,4 +15,9 @@ public class LexevsServiceApp extends SpringBootServletInitializer{
     public static void main(String[] args) {
         SpringApplication.run(LexevsServiceApp.class, args);
     }
+
+    @Override
+    public void onStartup(ServletContext servletContext) throws ServletException {
+
+    }
 }
