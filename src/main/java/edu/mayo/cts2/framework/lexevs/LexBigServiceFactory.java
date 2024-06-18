@@ -33,8 +33,8 @@ public class LexBigServiceFactory implements FactoryBean<LexBIGService>, Disposa
 
 	private LexBIGService lexBIGService;
 
-	@Value("${lexevsRemoteApiUrl}")
-	private String lexevsRemoteApiUrl;
+//	@Value("${lexevsRemoteApiUrl}")
+//	private String lexevsRemoteApiUrl;
 	
 	@Value("${LG_CONFIG_FILE}")
 	private String lgConfigFile;
@@ -91,13 +91,13 @@ public class LexBigServiceFactory implements FactoryBean<LexBIGService>, Disposa
 		this.hasBeenConfigured = true;
 	}
 
-	public String getLexevsRemoteApiUrl() {
-		return lexevsRemoteApiUrl;
-	}
-
-	public void setLexevsRemoteApiUrl(String lexevsRemoteApiUrl) {
-		this.lexevsRemoteApiUrl = lexevsRemoteApiUrl;
-	}
+//	public String getLexevsRemoteApiUrl() {
+//		return lexevsRemoteApiUrl;
+//	}
+//
+//	public void setLexevsRemoteApiUrl(String lexevsRemoteApiUrl) {
+//		this.lexevsRemoteApiUrl = lexevsRemoteApiUrl;
+//	}
 
 	public String getLgConfigFile() {
 		return lgConfigFile;
