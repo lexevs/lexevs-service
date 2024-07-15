@@ -9,7 +9,7 @@
 package edu.mayo.cts2.framework.lexevs;
 
 import jakarta.annotation.Resource;
-import org.LexGrid.LexBIG.LexBIGService.LexBIGService;
+//import org.LexGrid.LexBIG.LexBIGService.LexBIGService;
 import org.lexgrid.valuesets.LexEVSValueSetDefinitionServices;
 import org.lexgrid.valuesets.impl.LexEVSValueSetDefinitionServicesImpl;
 import org.springframework.beans.factory.FactoryBean;
@@ -23,8 +23,8 @@ import org.springframework.stereotype.Component;
 public class LexEVSValueSetDefinitionServicesFactory implements
 		FactoryBean<LexEVSValueSetDefinitionServices> {
 	
-	@Resource
-	private LexBIGService lbs;
+//	@Resource
+//	private LexBIGService lbs;
 
 	@Override
 	public LexEVSValueSetDefinitionServices getObject() throws Exception {

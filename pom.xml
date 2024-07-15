@@ -16,9 +16,9 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <forkCount>4</forkCount>
-        <lexevs.version>6.7.0.RC3-SNAPSHOT</lexevs.version>
-        <spring.version>6.1.6</spring.version>
-        <spring-security.version>5.8.5</spring-security.version>
+        <lexevs.version>6.7.1.RC7-SNAPSHOT</lexevs.version>
+        <spring.version>6.1.8</spring.version>
+        <spring-security.version>6.2.4</spring-security.version>
     </properties>
 
     <artifactId>lexevs-service</artifactId>
