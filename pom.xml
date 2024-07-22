@@ -12,11 +12,11 @@
         <groupId>edu.mayo</groupId>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <test.permgen.max>500m</test.permgen.max>
-        <java.version>1.8</java.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <forkCount>4</forkCount>
-        <lexevs.version>6.7.1.RC7-SNAPSHOT</lexevs.version>
+        <lexevs.version>6.7.1.RC1</lexevs.version>
         <spring.version>6.1.8</spring.version>
         <spring-security.version>6.2.4</spring-security.version>
     </properties>
@@ -404,13 +404,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        
-        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-queryparser -->
-		<dependency>
-    		<groupId>org.apache.lucene</groupId>
-    		<artifactId>lucene-queryparser</artifactId>
-    		<version>5.3.1</version>
-		</dependency>
 
         
         <!-- https://mvnrepository.com/artifact/org.compass-project/compass -->
