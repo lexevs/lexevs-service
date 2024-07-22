@@ -133,9 +133,16 @@
                     </exclusion>
                 </exclusions>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+		<dependency>
+    		<groupId>org.mybatis</groupId>
+    		<artifactId>mybatis-spring</artifactId>
+    		<version>3.0.3</version>
+		</dependency>
+
         <dependency>
             <groupId>lexevs</groupId>
-            <artifactId>lexbig-impl</artifactId>
+            <artifactId>lexbig-</artifactId>
             <version>${lexevs.version}</version>
             <exclusions>
                 <exclusion>
@@ -150,11 +157,11 @@
                     <groupId>slf4j</groupId>
                     <artifactId>jcl-over-slf4j</artifactId>
                 </exclusion>
-                <exclusion>
-                    <groupId>org.apache.logging.log4j</groupId>
-                    <artifactId>log4j</artifactId>
-                </exclusion>
-                <exclusion>
+<!--                <exclusion>-->
+<!--                    <groupId>org.apache.logging.log4j</groupId>-->
+<!--                    <artifactId>log4j</artifactId>-->
+<!--                </exclusion>-->
+               <exclusion>
                     <groupId>org.springframework</groupId>
                     <artifactId>spring-core</artifactId>
                 </exclusion>
@@ -165,6 +172,58 @@
                 <exclusion>
                     <groupId>org.springframework</groupId>
                     <artifactId>spring-asm</artifactId>
+                </exclusion>
+				 <exclusion>
+                    <groupId>org.mybatis</groupId>
+    				<artifactId>mybatis-spring</artifactId>
+                </exclusion>
+				<exclusion>
+					<groupId>org.springframework.data</groupId>
+    				<artifactId>spring-data-commons</artifactId>
+    			</exclusion>
+                <exclusion>
+                	<groupId>xml-apis</groupId>
+                	<artifactId>xml-apis</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+<!--                <exclusion>-->
+<!--                    <groupId>org.apache.logging.log4j</groupId>-->
+<!--                    <artifactId>log4j-slf4j-impl</artifactId>-->
+<!--                </exclusion>-->
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.ws</groupId>
+                    <artifactId>spring-ws</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.batch</groupId>
+                    <artifactId>spring-batch-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+<!--                <exclusion>-->
+<!--                    <groupId>org.apache.logging.log4j</groupId>-->
+<!--                    <artifactId>log4j-slf4j-impl</artifactId>-->
+<!--                </exclusion>-->
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.ws</groupId>
+                    <artifactId>spring-ws</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.ws</groupId>
+                    <artifactId>spring-xml</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -279,63 +338,27 @@
             <artifactId>spring-websocket</artifactId>
             <version>${spring.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+		<dependency>
+    		<groupId>org.springframework.data</groupId>
+    		<artifactId>spring-data-jpa</artifactId>
+    		<version>3.3.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-commons -->
+		<dependency>
+    		<groupId>org.springframework.data</groupId>
+    		<artifactId>spring-data-commons</artifactId>
+    		<version>3.3.1</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework.retry/spring-retry -->
+		<dependency>
+    		<groupId>org.springframework.retry</groupId>
+    		<artifactId>spring-retry</artifactId>
+    		<version>2.0.0</version>
+		</dependency>
 
 
-
-        <dependency>
-            <groupId>lexevs</groupId>
-            <artifactId>lexbig-interfaces</artifactId>
-            <version>${lexevs.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.apache.logging.log4j</groupId>
-                    <artifactId>log4j-slf4j-impl</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-core</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework.ws</groupId>
-                    <artifactId>spring-ws</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework.batch</groupId>
-                    <artifactId>spring-batch-core</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>lexevs</groupId>
-            <artifactId>lexevs-valuesets</artifactId>
-            <version>${lexevs.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.apache.logging.log4j</groupId>
-                    <artifactId>log4j-slf4j-impl</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-core</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework.ws</groupId>
-                    <artifactId>spring-ws</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework.ws</groupId>
-                    <artifactId>spring-xml</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
         
         <dependency>
             <groupId>org.reflections</groupId>
@@ -380,7 +403,29 @@
                     <artifactId>spring-xml</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>       
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-queryparser -->
+		<dependency>
+    		<groupId>org.apache.lucene</groupId>
+    		<artifactId>lucene-queryparser</artifactId>
+    		<version>5.3.1</version>
+		</dependency>
+
+        
+        <!-- https://mvnrepository.com/artifact/org.compass-project/compass -->
+		<dependency>
+    		<groupId>org.compass-project</groupId>
+    		<artifactId>compass</artifactId>
+    		<version>2.2.0</version>
+		</dependency>
+
+         <dependency>
+    		<groupId>org.apache.logging.log4j</groupId>
+    		<artifactId>log4j-core</artifactId>
+    		<version>2.19.0</version>
+		</dependency>
+       
 
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -423,10 +468,10 @@
             <artifactId>commons-configuration2</artifactId>
             <version>2.8.0</version>
             <exclusions>
-                <exclusion>
-                    <groupId>org.apache.logging.log4j</groupId>
-                    <artifactId>log4j</artifactId>
-                </exclusion>
+<!--                <exclusion>-->
+<!--                    <groupId>org.apache.logging.log4j</groupId>-->
+<!--                    <artifactId>log4j</artifactId>-->
+<!--                </exclusion>-->
                 <exclusion>
                     <groupId>com.fasterxml.jackson.core</groupId>
                     <artifactId>jackson-databind</artifactId>
@@ -437,6 +482,14 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
+		<dependency>
+    		<groupId>commons-dbcp</groupId>
+    		<artifactId>commons-dbcp</artifactId>
+    		<version>1.4</version>
+		</dependency>
+
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -476,6 +529,106 @@
             <version>2.10.14</version>
         </dependency>
 
+		<dependency>
+    		<groupId>org.mybatis</groupId>
+    		<artifactId>mybatis</artifactId>
+    		<version>3.5.11</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.mybatis.dynamic-sql/mybatis-dynamic-sql -->
+		<dependency>
+    		<groupId>org.mybatis.dynamic-sql</groupId>
+    		<artifactId>mybatis-dynamic-sql</artifactId>
+    		<version>1.4.1</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.ehcache/ehcache -->
+		<dependency>
+    		<groupId>org.ehcache</groupId>
+    		<artifactId>ehcache</artifactId>
+    		<version>3.10.8</version>
+		</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.codehaus.castor/castor -->
+    <dependency>
+        <groupId>org.codehaus.castor</groupId>
+        <artifactId>castor</artifactId>
+        <version>1.2</version>
+    </dependency>
+
+<!-- https://mvnrepository.com/artifact/org.jdom/jdom2 -->
+<dependency>
+    <groupId>org.jdom</groupId>
+    <artifactId>jdom2</artifactId>
+    <version>2.0.6.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
+<dependency>
+    <groupId>org.hibernate.orm</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>6.3.1.Final</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.arangodb/arangodb-java-driver -->
+<dependency>
+    <groupId>com.arangodb</groupId>
+    <artifactId>arangodb-java-driver</artifactId>
+    <version>6.20.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-core -->
+<dependency>
+    <groupId>org.apache.lucene</groupId>
+    <artifactId>lucene-core</artifactId>
+    <version>5.3.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-analyzers-common -->
+<dependency>
+    <groupId>org.apache.lucene</groupId>
+    <artifactId>lucene-analyzers-common</artifactId>
+    <version>5.3.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-analyzers-phonetic -->
+<dependency>
+    <groupId>org.apache.lucene</groupId>
+    <artifactId>lucene-analyzers-phonetic</artifactId>
+    <version>5.3.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-join -->
+<dependency>
+    <groupId>org.apache.lucene</groupId>
+    <artifactId>lucene-join</artifactId>
+    <version>5.3.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-queries -->
+<dependency>
+    <groupId>org.apache.lucene</groupId>
+    <artifactId>lucene-queries</artifactId>
+    <version>5.3.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-queryparser -->
+<dependency>
+    <groupId>org.apache.lucene</groupId>
+    <artifactId>lucene-queryparser</artifactId>
+    <version>5.3.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-sandbox -->
+<dependency>
+    <groupId>org.apache.lucene</groupId>
+    <artifactId>lucene-sandbox</artifactId>
+    <version>5.3.1</version>
+</dependency>
+
+
+
+
 
         <!--Testing -->
         <dependency>
@@ -484,6 +637,29 @@
             <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-all</artifactId>
+    <version>1.10.8</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.esotericsoftware.kryo/kryo -->
+<dependency>
+    <groupId>com.esotericsoftware.kryo</groupId>
+    <artifactId>kryo</artifactId>
+    <version>2.24.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/de.javakaffee/kryo-serializers -->
+<dependency>
+    <groupId>de.javakaffee</groupId>
+    <artifactId>kryo-serializers</artifactId>
+    <version>0.45</version>
+</dependency>
+
+
 
 <!--        <dependency>-->
 <!--            <groupId>org.codehaus.groovy</groupId>-->
@@ -621,19 +797,14 @@
             </snapshots>
         </repository>
         <repository>
-            <id>nci.maven.thirdparty</id>
-            <name>NCI Maven 3rd Party Repository</name>
-            <url>https://ncimvn.nci.nih.gov/nexus/content/repositories/LexEVS3rdParty</url>
-        </repository>
-        <repository>
-            <id>nci.maven.snapshot</id>
-            <name>NCI Maven LexEVS Snapshots</name>
-            <url>https://ncimvn.nci.nih.gov/nexus/content/repositories/LexEVSSnapshots</url>
-        </repository>
-        <repository>
             <id>nci.maven.public</id>
             <name>NCI Maven public passthrough</name>
             <url>https://ncimvn.nci.nih.gov/nexus/content/repositories/public</url>
         </repository>
+        <repository>
+        	<id>project.local</id>
+        	<name>project</name>
+       	 <url>file:repo</url>
+    	</repository>
     </repositories>
 </project>
